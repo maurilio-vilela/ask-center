@@ -1,0 +1,39 @@
+.content{
+    display: grid;
+    grid-template-columns: 50% 35%;
+    grid-template-rows: 9.4rem 1fr;
+
+    grid-template-areas: 
+    'header header'
+    'left right';
+}
+header{
+    grid-area: header;
+}
+#bg{
+    grid-area: left;
+    background: url('/assets/img/background-home.svg') no-repeat top/contain;
+}
+main{
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main, .content{
+    width: min(36.3rem 100%);
+}
+main, h2{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(16px, 1.8vw, 2.2rem);
+    margin-bottom: 1.6rem;
+}
+input{
+    border: .15rem solid var(--grey-blue);
+    padding: 0 1.2rem;
+}
+input, button, .button{
+    width: 80%;
+    margin-bottom: 1.4rem;
+}
